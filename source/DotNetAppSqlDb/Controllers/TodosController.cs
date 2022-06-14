@@ -142,6 +142,18 @@ namespace DotNetAppSqlDb.Controllers
             Trace.WriteLine("GET /Todos/SuccessStories");
             return View(db.Todoes.AsEnumerable());
         }
+        // GET: Todos/SelfLearning
+        public ActionResult SelfLearning()
+        {
+            Trace.WriteLine("GET /Todos/SelfLearning");
+            return View(new Todo { CreatedDate = DateTime.Now });
+        } 
+        // GET: Todos/JobOpportunities
+        public ActionResult JobOpportunities()
+        {
+            Trace.WriteLine("GET /Todos/JobOpportunities");
+            return View(new Todo { CreatedDate = DateTime.Now });
+        }
 
         protected override void Dispose(bool disposing)
         {

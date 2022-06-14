@@ -274,6 +274,8 @@
     <Content Include="Views\Todos\KnowYourRights.cshtml" />
     <Content Include="Views\Todos\SelfDefense.cshtml" />
     <Content Include="Views\Todos\SuccessStories.cshtml" />
+    <Content Include="Views\Todos\SelfLearning.cshtml" />
+    <Content Include="Views\Todos\JobOpportunities.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
