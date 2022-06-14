@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "SuccessStories";
+}
+
+@model IEnumerable<DotNetAppSqlDb.Models.Todo>
+
+<br>
+<h2 style="text-align: center;">Success Stories</h2>
+<br>
+<h5 style="text-align: center;">
+    <i>
+        "Next Women brings to you Success Stories of ordinary women who did extra ordinary achivements. 
+        These inspirational stories motivates us in our journey to become Next Generation Women"
+    </i>
+</h5>
+
+<br />
+<div style="text-align: center;">
+    <button type="button" class="btn btn-outline-light" style="width: 50%; margin-bottom: 30px" onclick="location.href='@Url.Action("Create")';return false;">
+        <h5>Add your Success Stories</h5>
+    </button>
+    <br>
+</div>
+
+<table class="table" style="text-align: center;">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
