@@ -154,6 +154,12 @@ namespace DotNetAppSqlDb.Controllers
             Trace.WriteLine("GET /Todos/JobOpportunities");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
+        public ActionResult AboutUs()
+        {
+            Trace.WriteLine("GET /Todos/AboutUs");
+            return View(new Todo { CreatedDate = DateTime.Now });
+        }
+
 
         protected override void Dispose(bool disposing)
         {
