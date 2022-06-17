@@ -14,17 +14,17 @@ namespace DotNetAppSqlDb.Controllers
     {
         private MyDatabaseContext db = new MyDatabaseContext();
 
-        // GET: Todos
+        // GET: Index
         public ActionResult Index()
         {            
-            Trace.WriteLine("GET /Todos/Index");
+            Trace.WriteLine("GET /Index");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
 
-        // GET: Todos/Details/5
+        // GET: /Details/5
         public ActionResult Details(int? id)
         {
-            Trace.WriteLine("GET /Todos/Details/" + id);
+            Trace.WriteLine("GET /Details/" + id);
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -37,21 +37,21 @@ namespace DotNetAppSqlDb.Controllers
             return View(todo);
         }
 
-        // GET: Todos/Create
+        // GET: /Create
         public ActionResult Create()
         {
             Trace.WriteLine("GET /Todos/Create");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
 
-        // POST: Todos/Create
+        // POST: /Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Description,CreatedDate")] Todo todo)
         {
-            Trace.WriteLine("POST /Todos/Create");
+            Trace.WriteLine("POST /Create");
             if (ModelState.IsValid)
             {
                 db.Todoes.Add(todo);
@@ -62,10 +62,10 @@ namespace DotNetAppSqlDb.Controllers
             return View(todo);
         }
 
-        // GET: Todos/Edit/5
+        // GET: /Edit/5
         public ActionResult Edit(int? id)
         {
-            Trace.WriteLine("GET /Todos/Edit/" + id);
+            Trace.WriteLine("GET /Edit/" + id);
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -78,14 +78,14 @@ namespace DotNetAppSqlDb.Controllers
             return View(todo);
         }
 
-        // POST: Todos/Edit/5
+        // POST: /Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,Description,CreatedDate")] Todo todo)
         {
-            Trace.WriteLine("POST /Todos/Edit/" + todo.ID);
+            Trace.WriteLine("POST /Edit/" + todo.ID);
             if (ModelState.IsValid)
             {
                 db.Entry(todo).State = EntityState.Modified;
@@ -95,10 +95,10 @@ namespace DotNetAppSqlDb.Controllers
             return View(todo);
         }
 
-        // GET: Todos/Delete/5
+        // GET: /Delete/5
         public ActionResult Delete(int? id)
         {
-            Trace.WriteLine("GET /Todos/Delete/" + id);
+            Trace.WriteLine("GET /Delete/" + id);
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -111,52 +111,53 @@ namespace DotNetAppSqlDb.Controllers
             return View(todo);
         }
 
-        // POST: Todos/Delete/5
+        // POST: /Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Trace.WriteLine("POST /Todos/Delete/" + id);
+            Trace.WriteLine("POST  /Delete/" + id);
             Todo todo = db.Todoes.Find(id);
             db.Todoes.Remove(todo);
             db.SaveChanges();
             return RedirectToAction("SuccessStories");
         }
-        // GET: Todos/KnowYourRights
+        // GET: /KnowYourRights
         public ActionResult KnowYourRights()
         {
-            Trace.WriteLine("GET /Todos/KnowYourRights");
+            Trace.WriteLine("GET /KnowYourRights");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
 
-        // GET: Todos/KnowYourRights
+        // GET: /SelfDefense
         public ActionResult SelfDefense()
         {
-            Trace.WriteLine("GET /Todos/SelfDefense");
+            Trace.WriteLine("GET /SelfDefense");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
 
         // GET: Todos/KnowYourRights
         public ActionResult SuccessStories()
         {
-            Trace.WriteLine("GET /Todos/SuccessStories");
+            Trace.WriteLine("GET /SuccessStories");
             return View(db.Todoes.AsEnumerable());
         }
-        // GET: Todos/SelfLearning
+        // GET: /SelfLearning
         public ActionResult SelfLearning()
         {
-            Trace.WriteLine("GET /Todos/SelfLearning");
+            Trace.WriteLine("GET /SelfLearning");
             return View(new Todo { CreatedDate = DateTime.Now });
         } 
-        // GET: Todos/JobOpportunities
+        // GET: /JobOpportunities
         public ActionResult JobOpportunities()
         {
-            Trace.WriteLine("GET /Todos/JobOpportunities");
+            Trace.WriteLine("GET /JobOpportunities");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
+        // GET: /AboutUs
         public ActionResult AboutUs()
         {
-            Trace.WriteLine("GET /Todos/AboutUs");
+            Trace.WriteLine("GET /AboutUs");
             return View(new Todo { CreatedDate = DateTime.Now });
         }
 
