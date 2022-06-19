@@ -1,22 +1,20 @@
----
-topic: ASP.NET and SQL Database sample for Azure App Service
-languages:
-  - aspx-csharp
-products:
-  - Azure App Service
-  - Azure Web Apps
----
+Add your idea files to this directory. Please don't rename this directory.
 
-# ASP.NET and SQL Database sample for Azure App Service
+Next Women Application 
+It is a simple , open source platform for Women Empowerment. 
+It aims create next generation women who are aware of their rights, are self-sufficient to protect themselves and aims to be financially independent
+It also supports different language , which makes it easier to use and learn from, specially for women's in rural region.
+It provides all the necessary tools and information for self development.
+It targets women across all the regions who are curious and enthusiastic to become next generation women.
 
-This is a sample application that you can use to follow along with the tutorial at 
-[Create an ASP.NET app in Azure with SQL Database](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-tutorial-dotnet-sqldatabase/). 
-
-## License
-
-See [LICENSE](LICENSE).
-
-## Contributing
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-  
+Key Features:
+Know Your Rights:
+	Create awareness about women empowerment schemes provided by the government of India
+Self Defence:
+	Information about the self defence techniques every women should know.	
+Self Learning
+	Provides list of important website to start your self learning journey
+Job Opportunities
+	Quick guide to woman-centric Job portals
+Success Stories
+	Motivates women with inspirational stories and platform to add your story

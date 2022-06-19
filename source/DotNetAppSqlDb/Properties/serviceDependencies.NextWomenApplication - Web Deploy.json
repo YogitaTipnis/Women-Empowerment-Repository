@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/dotnetappsqldbdbserver-01/databases/DotNetAppSqlDb_db01",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/dotnetappsqldbdbserver-01/databases/DotNetAppSqlDb_db01",
       "type": "mssql.azure",
       "connectionId": "MyDbConnection",
       "dynamicId": null
