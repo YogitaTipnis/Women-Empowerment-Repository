@@ -23,11 +23,14 @@
     <br>
 </div>
 
-<table class="table" style="text-align: center;">
+<table class="table">
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Story)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedDate)
@@ -39,8 +42,10 @@
     {
         <tr>
             <td>
-
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Story)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedDate)

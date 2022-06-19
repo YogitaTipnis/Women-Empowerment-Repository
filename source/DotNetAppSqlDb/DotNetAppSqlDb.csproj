@@ -208,6 +208,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206191344208_InitialCreate.cs" />
+    <Compile Include="Migrations\202206191344208_InitialCreate.designer.cs">
+      <DependentUpon>202206191344208_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206191434416_AddProperty.cs" />
+    <Compile Include="Migrations\202206191434416_AddProperty.designer.cs">
+      <DependentUpon>202206191434416_AddProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyDatabaseContext.cs" />
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -294,6 +303,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202206191344208_InitialCreate.resx">
+      <DependentUpon>202206191344208_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206191434416_AddProperty.resx">
+      <DependentUpon>202206191434416_AddProperty.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
